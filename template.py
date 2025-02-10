@@ -43,7 +43,7 @@ list_of_files = [
     "main.py",
     "Dockerfile",
     "setup.py",
-    "research/research.ipynb"
+    "research/research.ipynb",
     "templates/index.html"
 ]
 
