@@ -43,7 +43,6 @@ class DataValidation:
                     with open(self.config.STATUS_FILE, 'w') as f:
                         f.write(f"Validation_Staus is {validation_status}")
         except Exception as e:
-            raise e
-
+            raise e 
 
 
