@@ -14,3 +14,12 @@ data_validation:
 data_transformation:
   root_dir: artifacts/data_transformation
   data_path: artifacts/data_ingestion/winequality-red.csv
+
+model_training:
+  root_dir: artifacts/model_training
+  training_data: artifacts/data_transformation/Train.csv
+  testing_data: artifacts/data_transformation/test.csv
+  model_name: model.joblib                                #we are saving our model after training in joblib format(serialization-pkl or joblib)
+  
+
+

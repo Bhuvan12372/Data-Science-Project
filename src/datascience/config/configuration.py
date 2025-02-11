@@ -3,6 +3,7 @@ from src.datascience.utils.common import read_yaml,create_directories
 from src.datascience.entity.config_entity import DataIngestionConfig
 from src.datascience.entity.config_entity import DataValidationConfig
 from src.datascience.entity.config_entity import DataTransformationConfig
+from src.datascience.entity.config_entity import ModelTrainerConfig
 
 class ConfigurationManager:
     def __init__(self,config_filepath= CONFIG_FILE_PATH, params_filepath= PARAMS_FILE_PATH, schema_filepath = SCHEMA_FILE_PATH):
@@ -42,6 +43,23 @@ class ConfigurationManager:
             data_path = config.data_path
             )
         return data_transformation_config
+    
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+        config = self.config.model_training
+        params = self.params.ELASTIC_NET
+        schema = self.schema.TARGET_COLUMN
+        create_directories([config.root_dir])
+        model_trainer_config = ModelTrainerConfig(
+            root_dir = config.root_dir,
+            training_data = config.training_data,
+            testing_data = config.testing_data,
+            model_name = config.model_name,
+            alpha = params.alpha,
+            l1_ratio = params.l1_ratio,
+            target_column = schema
+
+        )
+        return model_trainer_config
     
 
     
