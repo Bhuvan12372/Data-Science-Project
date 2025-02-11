@@ -16,5 +16,6 @@ class ModelTrainer:
         train_y = train_data['quality']
         test_y = test_data['quality']
         lr = ElasticNet(alpha = self.config.alpha,l1_ratio = self.config.l1_ratio,random_state = 42)
+        lr.fit(train_x,train_y)
         joblib.dump(lr,os.path.join(self.config.root_dir,self.config.model_name))
 

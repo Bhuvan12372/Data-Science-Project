@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/GMI-00108/Downloads/Data%20Science%20Project%28CICD%29/Data-Science-Project/mlruns/0/795228d6a43e483ba28348099ecf13fb/artifacts
+end_time: 1739286562851
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 795228d6a43e483ba28348099ecf13fb
+run_name: blushing-fish-396
+run_uuid: 795228d6a43e483ba28348099ecf13fb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739286562694
+status: 4
+tags: []
+user_id: GMI-00108

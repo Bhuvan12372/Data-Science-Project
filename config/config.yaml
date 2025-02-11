@@ -22,4 +22,8 @@ model_training:
   model_name: model.joblib                                #we are saving our model after training in joblib format(serialization-pkl or joblib)
   
 
-
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  test_path: artifacts/data_transformation/test.csv
+  model_path: artifacts/model_training/model.joblib
+  evaluate_path: artifacts/model_evaluation/metrics.json
